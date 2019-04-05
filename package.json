@@ -1,0 +1,44 @@
+{
+  "name": "track-status",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "Logger": "0.0.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mdbreact": "^4.12.0",
+    "mongoose": "^5.4.21",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-dom": "^16.8.6",
+    "react-editable-table": "^1.12.32",
+    "react-redux": "^6.0.1",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "react-toasts": "^3.0.2",
+    "reactstrap": "^8.0.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
