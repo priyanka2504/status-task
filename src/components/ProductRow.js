@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EditableCell from './EditableCell';
+import EditableCellDropdown from './EditableCellDropdown';
 
 class ProductRow extends Component {
     onDelEvent() {
@@ -9,8 +10,8 @@ class ProductRow extends Component {
 
         return (
             <tr className="eachRow">
-                <EditableCell onProductTableUpdate={this.props.onProductTableUpdate} cellData={{
-                    "type": "Stage",
+                <EditableCellDropdown onProductTableUpdateDropdown={this.props.onProductTableUpdate} cellDataDropdown={{
+                    type: "Stage",
                     value: this.props.product.Stage,
                     id: this.props.product.id
                 }} />

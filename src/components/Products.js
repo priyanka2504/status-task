@@ -75,11 +75,32 @@ class Products extends Component {
         this.setState({ products: newProducts });
         console.log(this.state.products);
     };
+
+    handleProductTableDropdown(evt) {
+        console.log(evt.target.value)
+        var item = {
+            id: evt.target.id,
+            name: evt.target.name,
+            value: evt.target.value
+        };
+        var products = this.state.products.slice();
+        var newProducts = products.map(function (product) {
+
+            for (var key in product) {
+                if (key == item.name && product.id == item.id) {
+                    product[key] = item.value;
+                }
+            }
+            return product;
+        })
+        this.setState({ products: newProducts });
+        console.log(this.state.products);
+    };
     render() {
         return (
             <div>
                 <SearchBar filterText={this.state.filterText} onUserInput={this.handleUserInput.bind(this)} />
-                <ProductTable onProductTableUpdate={this.handleProductTable.bind(this)} onRowAdd={this.handleAddEvent.bind(this)} onRowDel={this.handleRowDel.bind(this)} products={this.state.products} filterText={this.state.filterText} />
+                <ProductTable onProductTableUpdateDropdown={this.handleProductTableDropdown.bind(this)} onProductTableUpdate={this.handleProductTable.bind(this)} onRowAdd={this.handleAddEvent.bind(this)} onRowDel={this.handleRowDel.bind(this)} products={this.state.products} filterText={this.state.filterText} />
             </div>
         );
     }
